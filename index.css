@@ -1,0 +1,58 @@
+.container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(/img/fon/default-fon.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.nav{
+    position: relative;
+    display: flex;
+    z-index: 10;
+    margin: 0;
+    margin-top: 5%;
+    justify-content: center;
+}
+
+.nik{
+    margin: 0;
+    margin-top: 25%;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.btn{
+    margin: 1%;
+    background-color: gray;
+
+}
+
+.btn:hover{
+    background-color: white;
+
+}
+
+.img {
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+#stars { 
+    position: absolute;
+    z-index: 1;
+    /* background:#477ab9; */
+    width:100%;
+    height: 100%;
+    /* height: 600px; */
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    }
+    
