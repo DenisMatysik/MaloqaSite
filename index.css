@@ -9,42 +9,51 @@
     position: absolute;
     background: center no-repeat;
     background-size: 100% 100%;
-    transition: background 1.3s ease;
+    transition: background 1s ease;
 }
 
 .nav{
+    width: max-content;
     position: relative;
-    display: flex;
     z-index: 10;
-    margin: 0;
-    margin-top: 5%;
-    justify-content: center;
+    margin: auto;
+    background-color: gray;
+    border-radius: 10px;
 }
 
 .nik{
-    margin: 0;
-    margin-top: 25%;
-    font-size: 60px;
+    width: max-content;
+    position: relative;
+    z-index: 10;
+    top: 50%;
+    margin: auto;
+    font-size: 70px;
     display: flex;
     justify-content: center;
+    text-shadow: 0 0 16px #604161;
     color: white;
 }
 
+.btn:first-child{
+    padding-left: 10px;
+}
+
 .btn{
-    margin: 1%;
+    transition: background 0.5s ease;
+    border: none;
+    border-radius: 10px;
     background-color: gray;
 
 }
 
 .btn:hover{
     background-color: white;
-
 }
 
 .img {
     padding: 10px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 #stars { 
@@ -56,4 +65,40 @@
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     }
+
+.btnMes{
+    position: absolute;
+    top: 70px;
+    text-align: center;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    border-radius: 10px;
+    animation-duration: 0.5s; 
+    animation-fill-mode: both;  
+    animation-name: show;
+}
     
+.message{
+    position: absolute;
+    top: -40px;
+    padding: 10px;
+    background-color: black;
+    font-size: 22px;
+    border-radius: 10px;
+    animation-duration: 0.5s; 
+    animation-fill-mode: both;  
+    animation-name: show;
+}
+
+@keyframes show { 
+    0% {  
+        opacity: 0;
+        transform: translate3d(0px, -50%, 0px);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
