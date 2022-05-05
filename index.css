@@ -1,10 +1,15 @@
+.body{
+    width: max-content;
+    height: max-content;
+}
+
 .container{
     width: 100%;
     height: 100%;
     position: absolute;
-    background-image: url(/img/fon/default-fon.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background: center no-repeat;
+    background-size: 100% 100%;
+    transition: background 1.3s ease;
 }
 
 .nav{
@@ -45,10 +50,6 @@
 #stars { 
     position: absolute;
     z-index: 1;
-    /* background:#477ab9; */
-    width:100%;
-    height: 100%;
-    /* height: 600px; */
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
