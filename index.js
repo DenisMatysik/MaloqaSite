@@ -1,6 +1,8 @@
-// Навигация
+// константы
 const container = document.querySelector(".container");
 const nav = document.querySelector(".nav");
+const nik = document.querySelector(".nik");
+const timeChangeFon = 25000; // каждые 30секунд меняется фон
 
 const colorTheme = {
     1:  {
@@ -65,6 +67,7 @@ const mainLinks = {
     },
 }
 
+// навигация
 for (key in mainLinks){
     const btn= document.createElement("button");
     const img = document.createElement("img");
@@ -98,7 +101,6 @@ for (key in mainLinks){
 
 
 // Всё что связано с NickName
-const nik = document.querySelector(".nik");
 nik.addEventListener("mouseover", showNick)
 nik.addEventListener("mouseout", closeNick)
 
@@ -113,14 +115,29 @@ function closeNick(){
     document.querySelector(".message").remove();
 }
 
-// Начальная устанввка фона и его смена
+// Начальная устанввка фона, его смена,  и установка ситлей навигации
 window.onload = randomBackGroundImage;
 function randomBackGroundImage(){
     let randomNumber = Math.ceil((Math.random()*8)); // меняется картинка 
     container.style.backgroundImage = `url(./img/fon/${randomNumber}.jpg)`;
+    for (let color in colorTheme){
+        if (color == randomNumber){
+            const btns = document.querySelectorAll(".btn");
+            nav.style.backgroundColor = colorTheme[color].main;
+            btns.forEach((currentBtn)=>{
+                currentBtn.style.backgroundColor = colorTheme[color].main;
+                currentBtn.addEventListener("mouseover", ()=>{
+                    currentBtn.style.backgroundColor = colorTheme[color].hover;
+                });
+                currentBtn.addEventListener("mouseout", ()=>{
+                    currentBtn.style.backgroundColor = colorTheme[color].main;
+                })
+            })
+        }
+    }
 }
 
 function changeFon(){
-    setInterval(randomBackGroundImage, 30000) // каждые 30секунд меняется фон
+    setInterval(randomBackGroundImage, timeChangeFon) 
     }   
 changeFon();

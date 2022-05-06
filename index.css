@@ -34,22 +34,10 @@
     color: white;
 }
 
-.btn:first-child{
-    padding-left: 10px;
-}
-
 .btn{
     transition: background 0.5s ease;
     border: none;
     border-radius: 10px;
-    background-color: grey;
-
-}
-
-
-
-.btn:hover{
-    background-color: white;
 }
 
 .img {
