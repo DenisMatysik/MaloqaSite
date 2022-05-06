@@ -2,6 +2,41 @@
 const container = document.querySelector(".container");
 const nav = document.querySelector(".nav");
 
+const colorTheme = {
+    1:  {
+        main: "#3877d4",
+        hover: "#5c8dd2",
+    },
+    2:  {
+        main: "#322a65",
+        hover: "#a25f92",
+    },
+    3:  {
+        main: "#6267a1",
+        hover: "#dab9d6",
+    },
+    4:  {
+        main: "#6a5951",
+        hover: "#f7a47c",
+    },
+    5:  {
+        main: "#ad3034",
+        hover: "#f2a790",
+    },
+    6:  {
+        main: "#66000b",
+        hover: "#fd6c79",
+    },
+    7:  {
+        main: "#267379",
+        hover: "#50be8f",
+    },
+    8:  {
+        main: "#603c7a",
+        hover: "#ba93c0",
+    },
+}
+
 const mainLinks = {
     discord:{
         link:"https://discord.gg/nD5AGcnx",
