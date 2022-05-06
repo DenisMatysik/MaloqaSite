@@ -17,11 +17,11 @@
     position: relative;
     z-index: 10;
     margin: auto;
-    background-color: gray;
     border-radius: 10px;
 }
 
 .nik{
+    font-family: 'Bangers', cursive;
     width: max-content;
     position: relative;
     z-index: 10;
